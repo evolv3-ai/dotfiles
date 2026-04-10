@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(winget *)",
+      "Bash(npm list *)",
+      "Bash(npm update *)",
+      "Bash(pwsh *Get-SystemInfo*)",
+      "Bash(pwsh *Test-Connectivity*)",
+      "Bash(systeminfo)",
+      "Bash(ipconfig *)",
+      "Bash(ping *)",
+      "Bash(nslookup *)",
+      "Bash(tracert *)",
+      "Bash(netstat *)",
+      "Bash(tasklist *)",
+      "Bash(Get-Process *)",
+      "Bash(Get-Service *)",
+      "Bash(Get-EventLog *)",
+      "Bash(Get-Volume *)",
+      "Bash(Get-Disk *)",
+      "Bash(Get-NetAdapter *)",
+      "Bash(Get-WindowsUpdate*)",
+      "Bash(Get-MpComputerStatus*)",
+      "Bash(Get-MpThreatDetection*)",
+      "Bash(Get-LocalUser*)",
+      "Bash(Get-LocalGroupMember*)"
+    ],
+    "deny": []
+  }
+}

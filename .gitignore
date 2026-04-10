@@ -1,0 +1,19 @@
+# Secrets
+*.age
+*.key
+.env
+.env.*
+
+# System inventory output
+inventory/
+*.inventory.json
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Windows
+Thumbs.db
+desktop.ini
