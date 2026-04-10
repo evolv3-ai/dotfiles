@@ -101,7 +101,7 @@ Write-Step 'Installing Node.js + Claude Code...'
 
 $installScript = Join-Path $RepoDir 'claude-code\install.ps1'
 if (Test-Path $installScript) {
-    & $installScript
+    Get-Content $installScript -Raw | Invoke-Expression
 } else {
     Write-Fail "install.ps1 not found at $installScript"
     exit 1
@@ -115,7 +115,7 @@ if (-not $SkipApps) {
     Write-Step 'Installing IT admin tools...'
     $appsScript = Join-Path $RepoDir 'windows\Install-Apps.ps1'
     if (Test-Path $appsScript) {
-        & $appsScript
+        Get-Content $appsScript -Raw | Invoke-Expression
     } else {
         Write-Warn 'Install-Apps.ps1 not found - skipping'
     }
@@ -187,7 +187,7 @@ if (-not $SkipInventory) {
     Write-Step 'Collecting system inventory...'
     $inventoryScript = Join-Path $RepoDir 'scripts\Get-SystemInfo.ps1'
     if (Test-Path $inventoryScript) {
-        & $inventoryScript
+        Get-Content $inventoryScript -Raw | Invoke-Expression
     } else {
         Write-Warn 'Get-SystemInfo.ps1 not found - skipping'
     }
