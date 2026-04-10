@@ -5,13 +5,13 @@ Turn a bare Windows 10/11 PC into a Claude Code-managed IT endpoint with one com
 ## Quick Start (Run as Administrator)
 
 ```powershell
-irm https://raw.githubusercontent.com/evolv3ai/dotfiles/main/bootstrap.ps1 | iex
+irm https://raw.githubusercontent.com/evolv3-ai/dotfiles/main/bootstrap.ps1 | iex
 ```
 
 Or clone and run locally:
 
 ```powershell
-git clone https://github.com/evolv3ai/dotfiles.git C:\bootstrap
+git clone https://github.com/evolv3-ai/dotfiles.git C:\bootstrap
 cd C:\bootstrap
 powershell -ExecutionPolicy Bypass -File bootstrap.ps1
 ```

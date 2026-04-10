@@ -5,7 +5,7 @@
 
 .DESCRIPTION
     One-liner (run as Administrator):
-      irm https://raw.githubusercontent.com/evolv3ai/dotfiles/main/bootstrap.ps1 | iex
+      irm https://raw.githubusercontent.com/evolv3-ai/dotfiles/main/bootstrap.ps1 | iex
 
     Steps:
       1. Install Node.js LTS + Claude Code
@@ -81,12 +81,12 @@ if (Test-Path (Join-Path $RepoDir '.git')) {
     Write-Ok "Repo already at $RepoDir"
 } elseif (Get-Command git -ErrorAction SilentlyContinue) {
     Write-Host "   Cloning to $RepoDir..." -ForegroundColor Gray
-    git clone https://github.com/evolv3ai/dotfiles.git $RepoDir 2>&1 | Out-Null
+    git clone https://github.com/evolv3-ai/dotfiles.git $RepoDir 2>&1 | Out-Null
     Write-Ok "Cloned to $RepoDir"
 } else {
     Write-Host '   git not found - downloading repo as zip...' -ForegroundColor Gray
     $zip = Join-Path $env:TEMP 'bootstrap-repo.zip'
-    Invoke-WebRequest -Uri 'https://github.com/evolv3ai/dotfiles/archive/refs/heads/main.zip' `
+    Invoke-WebRequest -Uri 'https://github.com/evolv3-ai/dotfiles/archive/refs/heads/main.zip' `
                       -OutFile $zip -UseBasicParsing
     Expand-Archive -Path $zip -DestinationPath $env:TEMP -Force
     if (Test-Path $RepoDir) { Remove-Item $RepoDir -Recurse -Force }
