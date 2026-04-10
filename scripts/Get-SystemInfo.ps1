@@ -35,7 +35,7 @@ $netAdapters = Get-NetAdapter -Physical -ErrorAction SilentlyContinue | ForEach-
         Name       = $_.Name
         Status     = $_.Status.ToString()
         MAC        = $_.MacAddress
-        Speed      = "$([math]::Round($_.LinkSpeed / 1e6, 0)) Mbps"
+        Speed      = $_.LinkSpeed
         IPv4       = ($ipConfig | Select-Object -ExpandProperty IPAddress -ErrorAction SilentlyContinue) -join ', '
     }
 }

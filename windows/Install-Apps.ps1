@@ -41,7 +41,7 @@ $CoreApps = @(
     'Microsoft.PowerShell'          # PowerShell 7+
     'Git.Git'                       # Version control
     '7zip.7zip'                     # Archive management
-    '9N0DX20HK701'                  # Windows Terminal (Store ID)
+    'Microsoft.WindowsTerminal'     # Windows Terminal
 )
 
 # IT Admin: diagnostics, remote access, networking
