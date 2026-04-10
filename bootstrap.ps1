@@ -90,7 +90,7 @@ if (Test-Path (Join-Path $RepoDir '.git')) {
                       -OutFile $zip -UseBasicParsing
     Expand-Archive -Path $zip -DestinationPath $env:TEMP -Force
     if (Test-Path $RepoDir) { Remove-Item $RepoDir -Recurse -Force }
-    Rename-Item (Join-Path $env:TEMP 'dotfiles-main') $RepoDir
+    Move-Item (Join-Path $env:TEMP 'dotfiles-main') $RepoDir -Force
     Remove-Item $zip -Force
     Write-Ok "Downloaded to $RepoDir"
 }
