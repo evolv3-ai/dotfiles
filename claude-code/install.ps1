@@ -53,7 +53,7 @@ if (-not $nodeInstalled) {
 
     if ($hasWinget) {
         Write-Host '   Using winget...' -ForegroundColor Gray
-        winget install --id OpenJS.NodeJS.LTS `
+        winget install --id OpenJS.NodeJS.LTS --source winget `
               --accept-source-agreements --accept-package-agreements --silent
         # -1978335189 = already installed
         if ($LASTEXITCODE -ne 0 -and $LASTEXITCODE -ne -1978335189) {

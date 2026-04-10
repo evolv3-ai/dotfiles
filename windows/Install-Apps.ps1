@@ -65,7 +65,7 @@ function Install-WingetApp {
         $notFound = ($check | Out-String) -match 'No installed package found'
         if ($notFound) {
             Write-Host "  Installing $AppId..." -ForegroundColor Yellow
-            winget install --id $AppId --silent `
+            winget install --id $AppId --source winget --silent `
                   --accept-source-agreements --accept-package-agreements
             if ($LASTEXITCODE -eq 0) {
                 Write-Host "  OK  $AppId" -ForegroundColor Green
