@@ -37,6 +37,9 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+# Unlock script execution for this process (npm, winget shims are .ps1 files)
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+
 # --- Helpers ----------------------------------------------------------------
 
 function Write-Step  { param([string]$Msg) Write-Host "`n:: $Msg" -ForegroundColor Cyan }
